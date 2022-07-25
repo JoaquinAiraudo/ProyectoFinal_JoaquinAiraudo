@@ -1,0 +1,33 @@
+{% extends 'Models/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} Agregar Ministros {% endblock %}
+
+{% block background %}{% static 'Home/img/background.jpg' %}{% endblock %}
+
+{% block content %}
+
+    <h1> REGISTRO DE MINISTROS </h1>
+    <p> Ingresa aquí datos sobre Ministros uruguayos </p>
+
+    {% if form.errors %}
+        <p> Error de validación, datos en el formulario incorrectos</p>
+    {% endif %}
+
+    <form action='{% url 'saveMinistro' %}' method='POST'>
+        {% csrf_token %}
+        
+        {% if check %}
+        <p> ¡Registro exitoso! </p>
+        {% endif %}
+
+        <table class="table-info">
+            {{form|crispy}} 
+        </table>
+        <br>
+        <button style='margin-bottom:25%' type="submit" class="btn btn-primary"> Guardar </button>
+    </form>
+
+
+{% endblock %}

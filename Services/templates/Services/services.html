@@ -1,0 +1,25 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block title %} Servicios {% endblock %}
+
+{% block background %}{% static 'Home/img/background.jpg' %}{% endblock %}
+
+{% block content %}
+  
+    <h1 style='margin:2vw;'> Mis servicios </h1>
+
+    {% for i in servicios %}
+
+        <div style='padding:3vw; display:grid; grid-template-columns:6fr 6fr;'>
+            <div style='margin:10%; color:white; padding:2vw; grid-column: 1; background-color: rgb(45,45,45);'>
+                <h2> {{i.titulo}} </h2>
+                <p>{{i.descripcion}}</p>
+            </div>
+                <img style='width:35vw; hight:35vw; justify-self: center;' src='{{i.imagen.url}}'>
+
+        </div>
+    {% endfor %}
+
+{% endblock %}
+

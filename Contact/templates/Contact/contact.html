@@ -1,0 +1,34 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block background %}{% static 'Home/img/background.jpg' %}{% endblock %}
+
+{% block content %}
+
+
+
+<div>
+
+    {% if form.errors %}
+    <p> Error de validación, datos en el formulario incorrectos</p>
+    {% endif %}
+
+    <form style='margin: 5% 40%; width:20%;' action='{% url 'savecontact' %}' method='POST'>
+        {% csrf_token %}
+
+        <h3> Contacto </h3>
+        <p> Ponte en contacto conmigo: </p>
+
+        {% if check %}
+        <p> Mensaje enviado. ¡Gracias! </p>
+        {% endif %}
+
+        {{form|crispy}}
+        <button style='margin-top:1vw' type='submit' class='btn btn-success'> ENVIAR </button>
+    </form> 
+</div>
+
+{% endblock %}

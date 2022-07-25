@@ -1,0 +1,14 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block background %}{% static 'Home/img/background.jpg' %}{% endblock %}
+
+{% block content %}
+
+<div style='position:fixed; z-index: 2; font-weight:bold; font-size:3vw; color:white; background-color:black; padding:1vw; margin:15% 0% 0% 50%'> Bienvenido a {{title1}} </div>
+<img style='' src={% static 'Home/img/home.jpg' %} alt="">
+
+
+{% endblock %}

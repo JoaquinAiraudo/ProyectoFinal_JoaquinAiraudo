@@ -1,0 +1,23 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block title %} Equipo {% endblock %}
+
+{% block background %}{% static 'Home/img/background.jpg' %}{% endblock %}
+
+{% block content %}
+
+
+<div style='padding:3vw; text-align: center;'>
+    
+    <img style='width:20vw; height:20vw' src={% static 'Home/img/about.png' %} alt="">
+    <h1 style='padding:2vw'> {{nombre}} </h1>
+
+
+    <p> {{vive}} </p>
+    <p> {{profesion}} </p>
+    <p> {{actualmente}} </p>
+    <p> {{actualmente2}} </p>
+</div>
+
+{% endblock %}

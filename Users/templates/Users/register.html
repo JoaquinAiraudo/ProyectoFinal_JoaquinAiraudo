@@ -1,0 +1,29 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block background %}{% static 'Home/img/background.jpg' %}{% endblock %}
+
+{% block content %}
+
+    <form style='margin: 2% 40%; width:20%;' method='POST' action=''>
+        
+        {% csrf_token %}
+
+        <h3 style='padding-bottom:1vw'> Registrarse: </h3>
+
+        {{ form|crispy }}
+
+        <button style='margin-top:1vw' type='submit' class='btn btn-success'> REGISTRARSE </button>
+
+
+    </form>
+
+
+{% endblock %}
+
+
+

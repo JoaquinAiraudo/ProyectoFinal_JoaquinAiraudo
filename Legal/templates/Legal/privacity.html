@@ -1,0 +1,16 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block title %} Privacidad {% endblock %}
+
+{% block background %}{% static 'Home/img/background.jpg' %}{% endblock %}
+
+{% block content %}
+
+<div style='text-align:center; margin:5% 30%'>
+    <h1> {{titulo}} </h1>
+    <br>
+    <p> {{contenido}} </p>
+</div>
+
+{% endblock %}
