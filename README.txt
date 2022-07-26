@@ -14,7 +14,7 @@ Los visitantes, a su vez, pueden consultar los registros de las bases de datos p
 
 La web cuenta con secciones de registro, acceso y cerrado de sesión totalmente funcionales.
 Todos los enlaces mostrados en la web redirecionan a alguna funcionalidad.
-Los datos de los modelos y formularios se almacena en la base Sqlite3, y lo multimedia en la carpeta Media.
+Los datos de los modelos y formularios se almacenan en la base Sqlite3, y lo multimedia en la carpeta Media.
 Cuenta con ejemplos de Información Legal y Política de Privacidad a los que se accede desde el footer.
 
 La sección Blog permite a los miembros staff realizar publicaciones desde el Panel de Administración, que se ven reflejados en la vista de los usuarios. Aportando datos como autor, fecha de creación y fecha de actualización.
